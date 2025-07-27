@@ -14,6 +14,7 @@ function Layout() {
                 <Link to="/">Home</Link>
                 <Link to="shop">Shop</Link>
                 <Link to="media">Media</Link>
+                <Link to="about">About</Link>
             </nav>
             <div className={styles.cartContainer}>
                 <Cart />
