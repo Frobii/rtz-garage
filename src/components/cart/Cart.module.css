@@ -1,0 +1,23 @@
+.cartWrapper {
+  position: relative;
+}
+
+.cartButton {
+  background: none;
+  border: none;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.cartDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color:#242424;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  min-width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}

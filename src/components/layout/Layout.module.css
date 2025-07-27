@@ -1,6 +1,21 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0rem;
-  text-align: center;
+.topBanner {
+  display: flex;
+  align-items: baseline;
+  width: 100vw;
+  gap: 40px;
+}
+
+.siteTitleLink {
+  margin-left: 20px;
+}
+
+.navBar {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 20px;
+}
+
+.cartContainer {
+  margin-left: auto;
+  margin-right: 30px;
 }
