@@ -20,7 +20,9 @@ function Layout() {
                 <Cart />
             </div>
         </header>
-        <Outlet />
+        <main className={styles.pageContent}>
+            <Outlet />
+        </main>
     </>
   );
 }
