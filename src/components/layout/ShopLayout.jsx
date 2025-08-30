@@ -2,7 +2,8 @@ import { Outlet, Link } from "react-router-dom";
 import styles from "./ShopLayout.module.css";
 
 function ShopLayout() {
-  const categories = ["wheels", "suspension", "exterior"]; // fetch these & category images from a DB in the future
+  // fetch these & category images from a DB in the future
+  const categories = ["wheels", "suspension", "drivetrain", "exterior", "interior"];
 
   return (
     <>
