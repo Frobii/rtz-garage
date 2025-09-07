@@ -1,0 +1,81 @@
+[
+    {
+        "id": "wheels-001",
+        "category": "wheels",
+        "brand": "Rays",
+        "model": "Volk Racing TE37",
+        "color": "silver",
+        "condition": "minimal wear",
+        "price": 2200,
+        "stock": 1,
+        "uploadDate": "2025-09-04",
+        "description": "Lightweight forged wheel perfect for street and track.",
+        "images": [
+            "/assets/wheels/wheels-001-1.jpg",
+            "/assets/wheels/wheels-001-2.jpg"
+        ],
+        "specs": {
+            "diameter": 17,
+            "width": [9.5, 9.5],
+            "offset": [45, 45],
+            "studPattern": "5x114.3",
+            "pieces": 1,
+            "centreBore": ""
+        },
+        "tyres": {
+            "brand": "Michelin",
+            "model": "Pilot Sport 4",
+            "size": "235/45/R17",
+            "condition": "new"
+        },
+        "accessories": [
+            "RAYS 17HEX Lock & Nut Set - Steel Wheel Nuts"
+        ],
+        "tags": [
+            "real",
+            "forged",
+            "lightweight"
+        ]
+    },
+        {
+        "id": "wheels-002",
+        "category": "wheels",
+        "brand": "BBS",
+        "model": "Nardi Torino ",
+        "color": "silver",
+        "condition": "reconditioned",
+        "price": 1800,
+        "stock": 1,
+        "uploadDate": "2025-09-05",
+        "description": "2 Piece high end wheel with multiple accessories.",
+        "images": [
+            "/assets/wheels/wheels-002-1.jpg",
+            "/assets/wheels/wheels-002-2.jpg",
+            "/assets/wheels/wheels-002-3.jpg"
+        ],
+        "specs": {
+            "diameter": 17,
+            "width": [8, 8.5],
+            "studPattern": "5x120",
+            "offset": [45, 51],
+            "pieces": 2,
+            "centreBore": "72.6mm"
+        },
+        "tyres": {
+            "brand": "",
+            "model": "",
+            "size": "",
+            "condition": ""
+        },
+        "accessories": [
+            "BBS hardware",
+            "BBS Hex nut removal tool 80mm",
+            "Aftermarket Centrelock caps with BMW and BBS inserts"
+        ],
+        "tags": [
+            "BMW",
+            "2 piece",
+            "luxury"
+        ]
+    }
+]
