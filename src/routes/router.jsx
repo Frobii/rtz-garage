@@ -14,20 +14,20 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout />,
     errorElement: <ErrorPage />,
-    children: [ 
-        { index: true, element: <Home /> },
-        {
-            path: "shop",
-            element: <ShopLayout />,
-            children: [
-            { index: true, element: <ShopLanding /> },
-            { path: ":category", element: <ShopCategory /> },
-            //   { path: ":category/:productId", element: <ProductDetail /> },
-            ],
-        },
-        { path: "media", element: <Media /> }, 
-        { path: "about", element: <About /> }, 
-        { path: "checkout", element: <Checkout /> }, 
+    children: [
+      { index: true, element: <Home /> },
+      {
+        path: "shop",
+        element: <ShopLayout />,
+        children: [
+          { index: true, element: <ShopLanding /> },
+          { path: ":category", element: <ShopCategory /> },
+          //   { path: ":category/:productId", element: <ProductDetail /> },
+        ],
+      },
+      { path: "media", element: <Media /> },
+      { path: "about", element: <About /> },
+      { path: "checkout", element: <Checkout /> },
     ],
   },
 ]);

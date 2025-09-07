@@ -1,30 +1,16 @@
 import { useParams } from "react-router-dom";
-import Wheels from "./categories/Wheels";
-import Suspension from "./categories/Suspension";
-import Drivetrain from "./categories/Drivetrain";
-import Exterior from "./categories/Exterior";
-import Interior from "./categories/Interior";
+
+import ProductList from "../../features/product/ProductList";
 
 function ShopCategory() {
-    const { category } = useParams();
-  
-    return (
-        <>
-            {   category === "wheels" ? (
-                <Wheels />
-            ) : category === "suspension" ? (
-                <Suspension />
-            ) : category === "drivetrain" ? (
-                <Drivetrain />
-            ) : category === "exterior" ? (
-                <Exterior />
-            ) : category === "interior" ? (
-                <Interior />
-            ) : (
-                <p>Please select a category</p>
-            )}
-        </>
-    )
+  const { category } = useParams();
+
+  return (
+    <>
+      <h3>{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
+      <ProductList category={category} />
+    </>
+  );
 }
 
-export default ShopCategory
+export default ShopCategory;
