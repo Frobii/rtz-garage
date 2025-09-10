@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
 const ProductContext = createContext(null);
 
@@ -10,7 +11,7 @@ export function ProductProvider({ children }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/data/products.json');
+        const response = await fetch("/data/products.json");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -32,10 +33,14 @@ export function ProductProvider({ children }) {
   );
 }
 
+ProductProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
 export const useProducts = () => {
   const context = useContext(ProductContext);
   if (context === null) {
-    throw new Error('useProducts must be used within a ProductProvider');
+    throw new Error("useProducts must be used within a ProductProvider");
   }
   return context;
 };

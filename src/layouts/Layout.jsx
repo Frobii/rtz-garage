@@ -1,6 +1,6 @@
 import { Outlet , Link } from "react-router-dom";
 import styles from "./Layout.module.css";
-import Cart from "../components/cart/Cart";
+import Cart from "../features/cart/Cart";
 
 function Layout() {
   return (
