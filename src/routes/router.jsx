@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "../components/layout/Layout";
+import Layout from "../layouts/Layout";
 import Home from "../pages/home/Home";
-import ShopLayout from "../components/layout/ShopLayout";
+import ShopLayout from "../layouts/ShopLayout";
 import ShopLanding from "../pages/shop-landing/ShopLanding";
 import ShopCategory from "../pages/shop-category/ShopCategory";
 import Media from "../pages/media/Media";

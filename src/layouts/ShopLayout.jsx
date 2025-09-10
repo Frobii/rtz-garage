@@ -2,7 +2,6 @@ import { Outlet, Link } from "react-router-dom";
 import styles from "./ShopLayout.module.css";
 
 function ShopLayout() {
-  // fetch these & category images from a DB in the future
   const categories = ["wheels", "suspension", "drivetrain", "exterior", "interior"];
 
   return (
@@ -24,7 +23,7 @@ function ShopLayout() {
       </nav>
       <Outlet />
     </>
-  )
+  );
 }
 
-export default ShopLayout
+export default ShopLayout;
