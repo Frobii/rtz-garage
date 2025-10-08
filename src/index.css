@@ -47,6 +47,10 @@ h1 {
   margin-bottom: 20px;
 }
 
+ul {
+  padding: 0px;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -77,4 +81,11 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.nonSelectable {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
