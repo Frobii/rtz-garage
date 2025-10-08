@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
+import styles from "./ProductList.module.css";
 import { useProducts } from "./ProductContext";
+import ProductCard from "./ProductCard.jsx";
 
 const ProductList = ({ category }) => {
   const { products, loading, error } = useProducts();
@@ -14,15 +16,11 @@ const ProductList = ({ category }) => {
   }
 
   return (
-    <div>
-      <ul>
-        {filteredProducts.map(product => (
-          <li key={product.id}>
-            {product.brand} {product.model}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul className={styles.productList}>
+      {filteredProducts.map(product => (
+        <ProductCard key={product.id} product={product}/>
+      ))}
+    </ul>
   );
 };
 
