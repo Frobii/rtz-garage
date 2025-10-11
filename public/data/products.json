@@ -1,6 +1,6 @@
 [
     {
-        "id": "wheels-001",
+        "id": "wheels-0001",
         "category": "wheels",
         "brand": "Rays",
         "model": "Volk Racing TE37",
@@ -38,7 +38,7 @@
         ]
     },
         {
-        "id": "wheels-002",
+        "id": "wheels-0002",
         "category": "wheels",
         "brand": "BBS",
         "model": "Nardi Torino ",
@@ -79,7 +79,7 @@
         ]
     },
         {
-        "id": "suspension-001",
+        "id": "suspension-0001",
         "category": "suspension",
         "brand": "Tein",
         "model": "Flex Z Coilovers ",
