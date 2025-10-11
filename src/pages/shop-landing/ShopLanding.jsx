@@ -1,13 +1,13 @@
+import ProductList from "../../features/product/ProductList";
+
 function ShopLanding() {
-  
+
   return (
     <>
-      <h3>Shop Landing</h3>
-      <p>
-        This will display the most recent and/or hot items uploaded to the shop.
-      </p>
+      <h3>All Products</h3>
+      <ProductList category={"all"}/>
     </>
-  )
+  );
 }
 
-export default ShopLanding
+export default ShopLanding;

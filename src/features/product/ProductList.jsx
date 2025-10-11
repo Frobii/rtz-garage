@@ -9,7 +9,9 @@ const ProductList = ({ category }) => {
   if (loading) return <div>Loading products...</div>;
   if (error) return <div>Error loading products: {error}</div>;
 
-  const filteredProducts = products.filter(p => p.category === category);
+  const filteredProducts = category === "all"
+    ? products
+    : products.filter(p => p.category === category);
 
   if (!filteredProducts.length) {
     return <div>There are currently no {category} products, check back soon!</div>;
