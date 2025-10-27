@@ -3,8 +3,15 @@ import styles from "./ProductCard.module.css";
 import ImageCarousel from "../../components/ui/ImageCarousel";
 import Button from "../../components/ui/Button";
 import { mdiCartPlus } from "@mdi/js";
+import { useCart } from "../cart/CartContext.jsx";
 
 function ProductCard({ product }) {
+  const { addItem } = useCart();
+
+  const handleAddToCart = () => {
+    addItem(product);
+  };
+
   return (
     <div className={styles.productWrapper}>
       <div className={`${styles.productHeader} nonSelectable`}>
@@ -15,7 +22,8 @@ function ProductCard({ product }) {
       <Button
         iconPath={mdiCartPlus}
         title={"Add to Cart"}
-        width={"12rem"} /* Same width as carosuel images*/
+        width={"12rem"}
+        onClick={handleAddToCart}
       />
     </div>
   );
