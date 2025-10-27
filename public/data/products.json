@@ -7,7 +7,8 @@
         "color": "silver",
         "condition": "minimal wear",
         "price": 2200,
-        "stock": 1,
+        "availableStock": 1,
+        "singleStockItem": true,
         "uploadDate": "2025-09-04",
         "description": "Lightweight forged wheel perfect for street and track.",
         "images": [
@@ -45,7 +46,8 @@
         "color": "silver",
         "condition": "reconditioned",
         "price": 1800,
-        "stock": 1,
+        "availableStock": 1,
+        "singleStockItem": true,
         "uploadDate": "2025-09-05",
         "description": "2 Piece high end wheel with multiple accessories.",
         "images": [
@@ -86,7 +88,8 @@
         "color": "green",
         "condition": "minimal wear",
         "price": 1250,
-        "stock": 1,
+        "availableStock": 1,
+        "singleStockItem": true,
         "uploadDate": "2025-09-05",
         "description": "Set of 4 Near New Tein Flex Z Coilover Suspension suitable for a 4th gen Liberty sedan or wagon.",
         "images": [
