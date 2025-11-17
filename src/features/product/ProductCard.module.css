@@ -25,7 +25,13 @@
 
 .productHeader {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    padding: 10px 0px 15px 0px;
+}
+
+.productHeader * {
+    margin: 0px;
 }
 
 .productHeader > * {
