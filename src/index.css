@@ -24,6 +24,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root { /* css variables */
+  --product-text-boldness: 600;
+  --product-text-shadow: 2px 3px #535bf25d;
+  --product-border: 3px solid #535bf25d;
+  --product-border-radius: 12px;
+  --product-box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
 a {
   font-weight: 500;
   color: #646cff;

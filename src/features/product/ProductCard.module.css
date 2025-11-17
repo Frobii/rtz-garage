@@ -14,8 +14,8 @@
 }
 
 .productWrapper:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
 }
 
 .productHeader:hover {
@@ -29,6 +29,6 @@
 }
 
 .productHeader > * {
-    font-weight: 600;
-    text-shadow: 2px 3px #535bf25d;
+    font-weight: var(--product-text-boldness);
+    text-shadow: var(--product-text-shadow);
 }

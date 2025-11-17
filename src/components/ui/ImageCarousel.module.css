@@ -5,12 +5,12 @@
 }
 
 .productImage {
-    border: 3px solid #535bf25d;
     width: 12rem;
     height: 12rem;
     object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border: var(--product-border);
+    border-radius: var(--product-border-radius);
+    box-shadow: var(--product-box-shadow);
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 

@@ -1,4 +1,4 @@
-import styles from "./Cart.module.css";
+import styles from "./CartItem.module.css";
 import PropTypes from "prop-types";
 
 function CartItem({ item }) {
@@ -7,8 +7,21 @@ function CartItem({ item }) {
 
   return (
     <div className={styles.cartItem}>
-      {product.id}
-      {quantity}
+      <img
+        className={styles.productImage}
+        src={product.images[0]}
+        alt={`${product.brand} ${product.model}`}
+      />
+      <div className = {styles.productInfo}>
+        <p>{product.brand} {product.model}</p>
+        {product.singleStockItem ? (
+          <p>${product.price}</p>
+        ) : (
+          <p>{quantity} x ${product.price}</p>
+          /*TODO: add increment/decrement buttons */
+        )
+        }
+      </div>
     </div>
   );
 }

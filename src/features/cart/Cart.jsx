@@ -9,24 +9,29 @@ import CartItem from "./CartItem";
 function Cart() {
   const [isOpen, setIsOpen] = useState(false);
   const { cartItems } = useCart();
+  const showEmptyCart = isOpen && cartItems.length === 0;
 
   return (
     <div className={styles.cartWrapper}>
       <button onClick={() => setIsOpen(!isOpen)} className={styles.cartButton}>
         <Icon path={mdiCartOutline} size={1} />
       </button>
-
-      {isOpen && (
-        <div className={styles.cartDropdown}>
-          <p>This is your cart</p>
-          {cartItems.map((item =>
-            <CartItem key={item.product.id} item={item}/>
-          ))}
-          <button>
-            <Link to="checkout">Checkout</Link>
-          </button>
+      {isOpen &&
+        (<div className={styles.cartDropdown}>
+          {showEmptyCart ? (
+            <div>Your cart is empty</div>
+          ) : (
+            <>
+              {cartItems.map((item =>
+                <CartItem key={item.product.id} item={item}/>
+              ))}
+              <button>
+                <Link to="checkout">Checkout</Link>
+              </button>
+            </>
+          )}
         </div>
-      )}
+        )}
     </div>
   );
 }
