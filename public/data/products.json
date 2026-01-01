@@ -111,5 +111,57 @@
             "coilovers",
             "subaru liberty"
         ]
+    },
+        {
+        "id": "merch-0001",
+        "category": "merch",
+        "brand": "RTZ Garage",
+        "model": "Z20 T-Shirt",
+        "color": "black",
+        "condition": "brand new",
+        "price": 50,
+        "availableStock": 20,
+        "singleStockItem": false,
+        "uploadDate": "2025-12-08",
+        "description": "Silky soft natural cotton fibres, RTZ Garage Style.",
+        "images": [
+            "/assets/merch/merch-001-1.jpg",
+            "/assets/merch/merch-001-2.jpg"
+        ],
+        "features": [
+            "100% Cotton",
+            "Limited Time Only"
+        ],
+        "tags": [
+            "T-Shirt",
+            "RTZ Garage",
+            "Cotton"
+        ]
+    },
+        {
+        "id": "merch-0002",
+        "category": "merch",
+        "brand": "RTZ Garage",
+        "model": "Wheels T-Shirt",
+        "color": "black",
+        "condition": "brand new",
+        "price": 50,
+        "availableStock": 20,
+        "singleStockItem": false,
+        "uploadDate": "2025-12-08",
+        "description": "Silky soft natural cotton fibres, RTZ Garage Style.",
+        "images": [
+            "/assets/merch/merch-002-1.jpg",
+            "/assets/merch/merch-002-2.jpg"
+        ],
+        "features": [
+            "100% Cotton",
+            "Limited Time Only"
+        ],
+        "tags": [
+            "T-Shirt",
+            "RTZ Garage",
+            "Cotton"
+        ]
     }
 ]

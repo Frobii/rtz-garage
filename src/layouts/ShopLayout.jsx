@@ -2,7 +2,14 @@ import { Outlet, Link } from "react-router-dom";
 import styles from "./ShopLayout.module.css";
 
 function ShopLayout() {
-  const categories = ["wheels", "suspension", "drivetrain", "exterior", "interior", "merch"];
+  const categories = [
+    "wheels",
+    "suspension",
+    "drivetrain",
+    "exterior",
+    "interior",
+    "merch"
+  ];
 
   return (
     <>
