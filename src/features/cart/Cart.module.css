@@ -3,25 +3,26 @@
 }
 
 .cartButton {
+  width: min-content;
+  position: fixed;
+  top: 30px;   
+  right: 30px;
   background: none;
   border: none;
   padding-top: 15px;
   cursor: pointer;
+  z-index: 1000; 
 }
 
 .cartDropdown {
-  position: absolute;
-  top: 100%;
-  right: 0;
+  position: fixed;
+  top: 80px;
+  right: 30px;
   background-color:#242424;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1rem;
   min-width: 300px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  z-index: 100;
-}
-
-button {
-  width: 100%;
+  z-index: 1000;
 }

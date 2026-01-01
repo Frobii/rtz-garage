@@ -15,9 +15,7 @@ function Layout() {
           <Link to="media">Media</Link>
           <Link to="about">About</Link>
         </nav>
-        <div className={styles.cartContainer}>
-          <Cart />
-        </div>
+        <Cart />
       </header>
       <main className={styles.pageContent}>
         <Outlet />
