@@ -20,7 +20,7 @@ const ProductList = ({ category }) => {
   return (
     <ul className={styles.productList}>
       {filteredProducts.map(product => (
-        <ProductCard key={product.id} product={product}/>
+        <ProductCard key={product.id} product={product} size="12rem"/>
       ))}
     </ul>
   );

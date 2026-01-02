@@ -5,7 +5,7 @@ import Button from "../../components/ui/Button";
 import { mdiCartPlus } from "@mdi/js";
 import { useCart } from "../cart/CartContext.jsx";
 
-function ProductCard({ product }) {
+function ProductCard({ product, size="8rem" }) {
   const { addItem } = useCart();
 
   const handleAddToCart = () => {
@@ -18,11 +18,11 @@ function ProductCard({ product }) {
         <p>{product.brand} {product.model}</p>
         <p>${product.price}</p>
       </div>
-      <ImageCarousel product={product}/>
+      <ImageCarousel product={product} size={size}/>
       <Button
         iconPath={mdiCartPlus}
-        title={"Add to Cart"}
-        width={"12rem"}
+        title="Add to Cart"
+        width={size}
         onClick={handleAddToCart}
       />
     </div>
@@ -30,7 +30,8 @@ function ProductCard({ product }) {
 }
 
 ProductCard.propTypes = {
-  product: PropTypes.object.isRequired
+  product: PropTypes.object.isRequired,
+  size: PropTypes.string
 };
 
 export default ProductCard;

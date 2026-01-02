@@ -4,7 +4,7 @@ import styles from "./ImageCarousel.module.css";
 import Icon from "@mdi/react";
 import { mdiChevronLeft , mdiChevronRight } from "@mdi/js";
 
-function ImageCarousel({ product }) {
+function ImageCarousel({ product, size="8rem" }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleClick = (direction) => {
@@ -23,6 +23,7 @@ function ImageCarousel({ product }) {
     <div className={styles.carousel}>
       <Icon onClick={() => handleClick("left")} className={styles.chevron} path={mdiChevronLeft} size={2} />
       <img
+        style={{ width: size, height: size }}
         className={`${styles.productImage} nonSelectable`}
         key={product.images[currentIndex]} // Key is auto generated unique image name
         src={product.images[currentIndex]}
@@ -38,7 +39,8 @@ ImageCarousel.propTypes = {
     brand: PropTypes.string.isRequired,
     model: PropTypes.string.isRequired,
     images: PropTypes.arrayOf(PropTypes.string).isRequired
-  }).isRequired
+  }).isRequired,
+  size: PropTypes.string
 };
 
 export default ImageCarousel;
