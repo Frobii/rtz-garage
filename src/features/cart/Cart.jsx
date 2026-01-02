@@ -12,7 +12,7 @@ function Cart() {
   const showEmptyCart = isOpen && cartItems.length === 0;
 
   return (
-    <div className={styles.cartWrapper}>
+    <>
       <button onClick={() => setIsOpen(!isOpen)} className={styles.cartButton}>
         <Icon path={mdiCartOutline} size={1} />
       </button>
@@ -32,7 +32,7 @@ function Cart() {
           )}
         </div>
         )}
-    </div>
+    </>
   );
 }
 

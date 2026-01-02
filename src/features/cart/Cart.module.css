@@ -1,23 +1,23 @@
-.cartWrapper {
-  position: relative;
-}
-
 .cartButton {
-  width: min-content;
   position: fixed;
-  top: 30px;   
-  right: 30px;
+  padding: 0px;
+  height: 80px;
+  width: 80px;
+  top: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  right: var(--page-margin);
   background: none;
   border: none;
-  padding-top: 15px;
   cursor: pointer;
   z-index: 1000; 
 }
 
 .cartDropdown {
   position: fixed;
-  top: 80px;
-  right: 30px;
+  top: 100px; /* cartButton height + top */
+  right: var(--page-margin);
   background-color:#242424;
   border: 1px solid #ccc;
   border-radius: 8px;
