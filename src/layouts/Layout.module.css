@@ -1,11 +1,12 @@
 .topBanner {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   width: 100vw;
-  gap: 40px;
+  padding-right: 80px; 
 }
 
-.siteTitleLink {
+.siteTitleLink, .navBar {
   margin-left: 20px;
 }
 
