@@ -1,9 +1,9 @@
 import styles from "./CartItem.module.css";
 import PropTypes from "prop-types";
+import QuantitySelector from "../../components/ui/QuantitySelector";
 
 function CartItem({ item }) {
   const product = item.product;
-  const quantity = item.qtyInCart;
 
   return (
     <div className={styles.cartItem}>
@@ -13,12 +13,14 @@ function CartItem({ item }) {
         alt={`${product.brand} ${product.model}`}
       />
       <div className = {styles.productInfo}>
-        <p>{product.brand} {product.model}</p>
+        <p className={styles.productName}>{product.brand} {product.model}</p>
         {product.singleStockItem ? (
           <p>${product.price}</p>
         ) : (
-          <p>{quantity} x ${product.price}</p>
-          /*TODO: add increment/decrement buttons */
+          <div className={styles.priceAndQuantity}>
+            <p>${product.price}</p>
+            <QuantitySelector item={item} />
+          </div>
         )
         }
       </div>
