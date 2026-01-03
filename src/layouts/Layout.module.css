@@ -1,14 +1,13 @@
 .topBanner {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  width: 100vw;
-  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 .navBar {
   font-size: 1.5rem;
-  padding-right: 100px;
   display: flex;
   gap: 15px;
 }
