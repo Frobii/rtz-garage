@@ -3,11 +3,11 @@
   padding: 0px;
   height: 80px;
   width: 80px;
-  top: 20px;
+  top: var(--page-padding-top);
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  right: var(--page-margin);
+  right: var(--page-padding-sides);
   background: none;
   border: none;
   cursor: pointer;
@@ -16,8 +16,8 @@
 
 .cartDropdown {
   position: fixed;
-  top: 100px; /* cartButton height + top */
-  right: var(--page-margin);
+  top: calc(80px + var(--page-padding-top)); /* cartButton height + top */
+  right: var(--page-padding-sides);
   background-color:#242424;
   border: 1px solid #ccc;
   border-radius: 8px;

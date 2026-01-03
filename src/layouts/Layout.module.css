@@ -3,23 +3,12 @@
   flex-wrap: wrap;
   align-items: baseline;
   width: 100vw;
-  min-height: 100px;
-}
-
-.siteTitleLink, .navBar {
-  margin-left: var(--page-margin);
+  gap: 30px;
 }
 
 .navBar {
   font-size: 1.5rem;
-  padding-right: 80px;
+  padding-right: 100px;
   display: flex;
-  gap: 20px;
-}
-
-.pageContent {
-  width: 100vw;
-  margin: 0 auto;
-  padding-left: 1.4rem;
-  padding-right: 1.4rem;
+  gap: 15px;
 }

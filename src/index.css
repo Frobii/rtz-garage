@@ -1,6 +1,8 @@
-:root { /* css variables */
-  --page-margin: 30px;
-  
+:root {
+  /* css variables */
+  --page-padding-sides: 35px;
+  --page-padding-top: calc(var(--page-padding-sides) / 2);
+
   --product-text-boldness: 600;
   --product-text-shadow: 2px 3px #535bf25d;
   --product-border: 3px solid #535bf25d;
@@ -13,9 +15,8 @@
 }
 
 #root {
-  max-width: 1280px;
-  /* margin: 0 auto; */
-  padding: 0rem;
+  padding: var(--page-padding-sides);
+  padding-top: var(--page-padding-top);
   text-align: center;
 }
 
@@ -45,7 +46,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -53,8 +53,7 @@ body {
 h1 {
   font-size: 3.2rem;
   line-height: 1.1;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 0px;
 }
 
 ul {
