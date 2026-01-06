@@ -4,6 +4,8 @@ import Home from "../pages/home/Home";
 import ShopLayout from "../layouts/ShopLayout";
 import ShopLanding from "../pages/shop-landing/ShopLanding";
 import ShopCategory from "../pages/shop-category/ShopCategory";
+import ProductLayout from "../layouts/ProductLayout";
+import Product from "../pages/product/Product";
 import Media from "../pages/media/Media";
 import About from "../pages/about/About";
 import Checkout from "../pages/checkout/Checkout";
@@ -21,8 +23,17 @@ const router = createBrowserRouter([
         element: <ShopLayout />,
         children: [
           { index: true, element: <ShopLanding /> },
-          { path: ":category", element: <ShopCategory /> },
-          //   { path: ":category/:productId", element: <ProductDetail /> },
+          {
+            path: ":category",
+            children: [
+              { index: true, element: <ShopCategory /> },
+              { element: <ProductLayout />,
+                children: [
+                  { path: ":productId", element: <Product /> }
+                ]
+              },
+            ]
+          }
         ],
       },
       { path: "media", element: <Media /> },

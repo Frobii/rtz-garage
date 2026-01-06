@@ -4,6 +4,7 @@ import ImageCarousel from "../../components/ui/ImageCarousel";
 import Button from "../../components/ui/Button";
 import { mdiCartPlus } from "@mdi/js";
 import { useCart } from "../cart/CartContext.jsx";
+import { Link } from "react-router-dom";
 
 function ProductCard({ product, size="8rem" }) {
   const { addItem } = useCart();
@@ -15,8 +16,13 @@ function ProductCard({ product, size="8rem" }) {
   return (
     <div className={styles.productWrapper}>
       <div className={`${styles.productHeader} nonSelectable`}>
-        <p>{product.brand} {product.model}</p>
-        <p>${product.price}</p>
+        <Link
+          key={product.id}
+          to={`/shop/product/${product.id}`}
+        >
+          <p>{product.brand} {product.model}</p>
+          <p>${product.price}</p>
+        </Link>
       </div>
       <ImageCarousel product={product} size={size}/>
       <Button
