@@ -6,9 +6,9 @@ function Layout() {
   return (
     <>
       <header className={styles.topBanner}>
-        <h1>
+        <div className={styles.siteTitle}>
           <Link to="/" className={styles.siteTitleLink}>RTZ Garage</Link>
-        </h1>
+        </div>
         <nav className={styles.navBar}>
           <Link to="/">Home</Link>
           <Link to="shop">Shop</Link>

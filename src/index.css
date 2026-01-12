@@ -51,7 +51,9 @@ body {
 }
 
 h1 {
-  font-size: 3.2rem;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-size: 2rem;
   line-height: 1.1;
   margin: 0px;
 }

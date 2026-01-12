@@ -12,12 +12,9 @@ function Product() {
 
   if (!product) return <p>Product not found!</p>;
 
-  const capitalized = product.category.charAt(0).toUpperCase() + product.category.slice(1).toLowerCase();
-
   return (
     <div>
-      <h3>{capitalized}</h3>
-      <h4>{product.brand} {product.model}</h4>
+      <h1>{product.brand} {product.model}</h1>
       <p>Category: {product.category}</p>
       <p>Price: ${product.price}</p>
       {/* render detailed product card, Add to Cart button, etc here */}

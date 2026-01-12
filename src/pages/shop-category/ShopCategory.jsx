@@ -7,7 +7,7 @@ function ShopCategory() {
 
   return (
     <>
-      <h3>{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
+      <h1>{category.charAt(0).toUpperCase() + category.slice(1)}</h1>
       <ProductList category={category} />
     </>
   );

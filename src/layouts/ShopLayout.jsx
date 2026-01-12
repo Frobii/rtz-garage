@@ -13,7 +13,6 @@ function ShopLayout() {
 
   return (
     <>
-      <h2>Shop</h2>
       <nav className={styles.categoryNavigation}>
         {categories.map((category) => {
           const capitalized = category.charAt(0).toUpperCase() + category.slice(1).toLowerCase();

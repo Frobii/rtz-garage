@@ -4,7 +4,7 @@ function ShopLanding() {
 
   return (
     <>
-      <h3>All Products</h3>
+      <h1>All Products</h1>
       <ProductList category={"all"}/>
     </>
   );

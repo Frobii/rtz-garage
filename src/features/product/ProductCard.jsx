@@ -20,7 +20,8 @@ function ProductCard({ product, size="8rem" }) {
           key={product.id}
           to={`/shop/product/${product.id}`}
         >
-          <p>{product.brand} {product.model}</p>
+          {/* consider if this should remain a h2 when using this component for future applications */}
+          <h2>{product.brand} {product.model}</h2>
           <p>${product.price}</p>
         </Link>
       </div>

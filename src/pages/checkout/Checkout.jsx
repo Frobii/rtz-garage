@@ -1,10 +1,10 @@
 function Checkout() {
-  
+
   return (
     <>
-      <h2>Checkout</h2>
+      <h1>Checkout</h1>
     </>
-  )
+  );
 }
 
-export default Checkout
+export default Checkout;

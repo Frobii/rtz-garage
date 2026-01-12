@@ -1,10 +1,10 @@
 function Media() {
-  
+
   return (
     <>
-      <h2>Media</h2>
+      <h1>Media</h1>
     </>
-  )
+  );
 }
 
-export default Media
+export default Media;
