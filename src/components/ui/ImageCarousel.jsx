@@ -21,7 +21,7 @@ function ImageCarousel({ product, size="8rem" }) {
 
   return (
     <div className={styles.carousel}>
-      <Icon onClick={() => handleClick("left")} className={styles.chevron} path={mdiChevronLeft} size={2} />
+      <Icon onClick={() => handleClick("left")} className={styles.chevron} path={mdiChevronLeft} color={"#535bf2"} size={2} />
       <img
         style={{ width: size, height: size }}
         className={`${styles.productImage} nonSelectable`}
@@ -29,7 +29,7 @@ function ImageCarousel({ product, size="8rem" }) {
         src={product.images[currentIndex]}
         alt={`${product.brand} ${product.model}`}
       />
-      <Icon onClick={() => handleClick("right")} className={styles.chevron} path={mdiChevronRight} size={2} />
+      <Icon onClick={() => handleClick("right")} className={styles.chevron} color={"#535bf2"} path={mdiChevronRight} size={2} />
     </div>
   );
 }
