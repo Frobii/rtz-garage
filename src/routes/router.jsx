@@ -2,8 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Layout from "../layouts/Layout";
 import Home from "../pages/home/Home";
 import ShopLayout from "../layouts/ShopLayout";
-import ShopLanding from "../pages/shop-landing/ShopLanding";
-import ShopCategory from "../pages/shop-category/ShopCategory";
+import Shop from "../pages/shop/Shop";
 import ProductLayout from "../layouts/ProductLayout";
 import Product from "../pages/product/Product";
 import Media from "../pages/media/Media";
@@ -22,11 +21,11 @@ const router = createBrowserRouter([
         path: "shop",
         element: <ShopLayout />,
         children: [
-          { index: true, element: <ShopLanding /> },
+          { index: true, element: <Shop /> }, // All Products
           {
             path: ":category",
             children: [
-              { index: true, element: <ShopCategory /> },
+              { index: true, element: <Shop /> }, // Category Specific
               { element: <ProductLayout />,
                 children: [
                   { path: ":productId", element: <Product /> }
