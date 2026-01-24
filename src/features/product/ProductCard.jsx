@@ -21,12 +21,12 @@ function ProductCard({ product, size="8rem" }) {
           to={`/shop/product/${product.id}`}
         >
           {/* consider if this should remain a h2 when using this component for future applications */}
-          <h2
-            className={styles.productHeading}
-          >
+          <h2 className={styles.productHeading}>
             {product.brand} {product.model}
           </h2>
-          <p>${product.price}</p>
+          <p className={styles.productHeading}>
+            ${product.price}
+          </p>
         </Link>
       </div>
       <ImageCarousel product={product} size={size}/>
