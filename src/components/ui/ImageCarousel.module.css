@@ -7,7 +7,7 @@
 .productImage {
     object-fit: cover;
     border: var(--product-border);
-    border-radius: var(--product-border-radius);
+    border-radius: var(--large-border-radius);
     box-shadow: var(--product-box-shadow);
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }

@@ -1,7 +1,6 @@
 .cartItem {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
     font-weight: var(--product-text-boldness);
     text-shadow: var(--product-text-shadow);
     /* transition: transform 0.3s;  */
@@ -21,7 +20,7 @@
     height: 4.5rem;
     object-fit: cover;
     border: var(--product-border);
-    border-radius: var(--product-border-radius);
+    border-radius: var(--medium-border-radius);
     box-shadow: var(--product-box-shadow);
     user-select: none; 
 }

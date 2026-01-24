@@ -1,5 +1,9 @@
 .categoryNavigation {
     display: flex;
-    gap: 15px;
+    gap: 1rem;
     justify-content: center;
+}
+
+.shopContent {
+    padding-top: 1.5rem;
 }

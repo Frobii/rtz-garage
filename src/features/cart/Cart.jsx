@@ -25,9 +25,13 @@ function Cart() {
               {cartItems.map((item =>
                 <CartItem key={item.product.id} item={item}/>
               ))}
-              <button>
-                <Link to="checkout">Checkout</Link>
-              </button>
+              <Link
+                to="checkout"
+                className="linkButton"
+                onClick={() => setIsOpen(false)}
+              >
+                Checkout
+              </Link>
             </>
           )}
         </div>

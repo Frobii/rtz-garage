@@ -1,8 +1,13 @@
 .productWrapper {
     width: fit-content;
     background-color:#535bf221;
-    padding-bottom: 30px;
-    border-radius: 12px;
+    padding: 1.5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: var(--large-border-radius);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     border: 3px solid #535bf25d;
 }
@@ -26,7 +31,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 10px 0px 15px 0px;
+    max-width: 260px;
+    gap: 1rem;
 }
 
 .productHeader * {
@@ -36,4 +42,8 @@
 .productHeader > * {
     font-weight: var(--product-text-boldness);
     text-shadow: var(--product-text-shadow);
+}
+
+.productHeading {
+    font-size: 1.25rem;
 }

@@ -21,7 +21,11 @@ function ProductCard({ product, size="8rem" }) {
           to={`/shop/product/${product.id}`}
         >
           {/* consider if this should remain a h2 when using this component for future applications */}
-          <h2>{product.brand} {product.model}</h2>
+          <h2
+            className={styles.productHeading}
+          >
+            {product.brand} {product.model}
+          </h2>
           <p>${product.price}</p>
         </Link>
       </div>

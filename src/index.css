@@ -1,12 +1,16 @@
 :root {
   /* css variables */
-  --page-padding-sides: 35px;
-  --page-padding-top: calc(var(--page-padding-sides) / 2);
+  --page-padding-sides: 3rem;
+  --page-padding-top: 2rem;
+  /* --page-padding-top: calc(var(--page-padding-sides) / 2); */
+
+  --small-border-radius: 6px;
+  --medium-border-radius: 12px;
+  --large-border-radius: 18px;
 
   --product-text-boldness: 600;
   --product-text-shadow: 2px 3px #535bf25d;
   --product-border: 3px solid #535bf25d;
-  --product-border-radius: 12px;
   --product-box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
@@ -50,19 +54,22 @@ body {
   min-height: 100vh;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
-  padding-top: 30px;
-  padding-bottom: 20px;
   font-size: 2rem;
   line-height: 1.1;
-  margin: 0px;
 }
 
 ul {
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
-button {
+.linkButton, button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -73,11 +80,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+.linkButton:hover, button:hover {
   border-color: #646cff;
 }
-button:focus,
-button:focus-visible {
+.linkButton:focus, button:focus,
+.linkButton:focus-visible, button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 

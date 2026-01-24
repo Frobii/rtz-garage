@@ -27,7 +27,9 @@ function ShopLayout() {
           );
         })}
       </nav>
-      <Outlet />
+      <div className={styles.shopContent}>
+        <Outlet />
+      </div>
     </>
   );
 }
