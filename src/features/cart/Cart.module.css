@@ -18,8 +18,8 @@
   position: fixed;
   top: calc(80px + var(--page-padding-top)); /* cartButton height + top */
   right: var(--page-padding-sides);
-  background-color:#242424;
-  border: 1px solid #ccc;
+  background-color: var(--background-color);
+  border: 1px solid var(--primary-accent-color);
   border-radius: var(--medium-border-radius);
   padding: 1rem;
   min-width: 300px;

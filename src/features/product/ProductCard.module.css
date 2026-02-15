@@ -1,15 +1,14 @@
 .productWrapper {
     width: fit-content;
-    background-color:#535bf221;
+    background-color: var(--secondary-accent-color);
     padding: 1.5rem 0.5rem;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around; /* align add to cart buttons when product heading wraps */
     border-radius: var(--large-border-radius);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    border: 3px solid #535bf25d;
 }
 
 .productWrapper, .productHeader {
@@ -45,5 +44,6 @@
 }
 
 .productHeading {
+    color: var(--product-text-color);
     font-size: 1.25rem;
 }

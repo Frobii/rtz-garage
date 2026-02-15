@@ -5,7 +5,8 @@
   gap: 0.5rem;
   height: 3rem;
   
-  background-color: #535bf2;
+  color: #ffffff; /* should always have a suitable backgrond color */
+  background-color: var(--primary-accent-color);
   border: none;
   border-radius: var(--medium-border-radius);
   

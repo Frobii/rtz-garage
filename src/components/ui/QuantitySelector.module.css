@@ -2,7 +2,6 @@
     display: flex;
     gap: 1rem;
     font-weight: var(--product-text-boldness);
-    text-shadow: var(--product-text-shadow);
     transition: transform 0.3s; 
     user-select: none;
     align-items: center;
@@ -12,7 +11,14 @@
     cursor: pointer;
     min-width: 30px;
     min-height: 30px;
-    background-color: rgb(42, 43, 62);
+    border-color: var(--primary-accent-color); /* don't have to set for :hover */
+    /* background-color: var(--secondary-accent-color); */
+    border: 1px solid var(--primary-accent-color);
     border-radius: var(--small-border-radius);
     text-align: center;
+}
+
+.quantityMinus:hover, .quantityPlus:hover, .quantityEntry:hover {
+  text-shadow: 0px 0px 50px var(--primary-accent-color);
+  border: 1px dashed var(--primary-accent-color);
 }

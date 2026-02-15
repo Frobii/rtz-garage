@@ -2,7 +2,7 @@
     display: flex;
     gap: 10px;
     font-weight: var(--product-text-boldness);
-    text-shadow: var(--product-text-shadow);
+    /* text-shadow: var(--product-text-shadow); */
     /* transition: transform 0.3s;  */
 }
 
