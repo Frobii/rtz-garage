@@ -21,4 +21,5 @@
 .quantityMinus:hover, .quantityPlus:hover, .quantityEntry:hover {
   text-shadow: 0px 0px 50px var(--primary-accent-color);
   border: 1px dashed var(--primary-accent-color);
+  color: var(--primary-accent-color);
 }
