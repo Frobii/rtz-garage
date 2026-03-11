@@ -1,12 +1,22 @@
 import styles from "./CartItem.module.css";
 import PropTypes from "prop-types";
 import QuantitySelector from "../../components/ui/QuantitySelector";
+import { useCart } from "../../features/cart/CartContext";
+import Icon from "@mdi/react";
+import { mdiDeleteForever } from "@mdi/js";
 
 function CartItem({ item }) {
+  const {removeItem} = useCart();
   const product = item.product;
 
   return (
-    <div className={styles.cartItem}>
+    <div className={styles.cartItem }>
+      <button
+        className={`linkButton ${styles.removeItem}`}
+        onClick={() => removeItem(product.id)}
+      >
+        <Icon path={mdiDeleteForever} size={1} />
+      </button>
       <img
         className={styles.productImage}
         src={product.images[0]}
