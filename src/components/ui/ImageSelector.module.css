@@ -1,0 +1,47 @@
+.imagePreview {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 2rem;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    width: fit-content;
+    color: var(--product-text-color);
+}
+
+.imageSelector {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.productImage {
+    object-fit: cover;
+    border: var(--product-border);
+    border-radius: var(--large-border-radius);
+    box-shadow: var(--product-box-shadow);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.productImage:hover {
+    cursor: pointer;
+}
+
+.chevron {
+    transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.chevron:hover {
+    cursor: pointer;
+    transform: scale(1.2); 
+}
+
+.chevron:active {
+    transform: scale(0.8); 
+}

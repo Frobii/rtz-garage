@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useProducts } from "../../features/product/ProductContext";
+import ImageSelector from "../../components/ui/ImageSelector";
+import styles from "./Product.module.css";
 
 function Product() {
   const { productId } = useParams();
@@ -13,11 +15,11 @@ function Product() {
   if (!product) return <p>Product not found!</p>;
 
   return (
-    <div>
+    <div className={styles.productDetails}>
       <h1>{product.brand} {product.model}</h1>
       <p>Category: {product.category}</p>
       <p>Price: ${product.price}</p>
-      {/* render detailed product card, Add to Cart button, etc here */}
+      <ImageSelector product={product}/>
     </div>
   );
 }
