@@ -1,10 +1,28 @@
-import { createContext, useContext, useState, useMemo } from "react";
+import { createContext, useContext, useState, useMemo, useEffect } from "react";
 import PropTypes from "prop-types";
 
 const CartContext = createContext(null);
 
 export function CartProvider({ children }) {
-  const [cartItems, setCartItems] = useState([]);
+  // Check if there are cart items in local storage
+  const [cartItems, setCartItems] = useState(() => {
+    try {
+      const savedCart = localStorage.getItem("shopping_cart");
+      return savedCart ? JSON.parse(savedCart) : [];
+    } catch (error) {
+      console.error("Failed to load cart from cache,", error);
+      return [];
+    }
+  });
+
+  // When cartItems is updated, update localStorage
+  useEffect(() => {
+    try {
+      localStorage.setItem("shopping_cart", JSON.stringify(cartItems));
+    } catch (error) {
+      console.error("Failed to persist cart:", error);
+    }
+  }, [cartItems]);
 
   const addItem = (product) => {
     // singleStockItem validation required here, don't want to block add to cart buttons after first click
