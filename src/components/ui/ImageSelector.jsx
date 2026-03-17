@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import styles from "./ImageSelector.module.css";
 import Icon from "@mdi/react";
@@ -6,8 +6,9 @@ import { mdiChevronLeft , mdiChevronRight } from "@mdi/js";
 
 function ImageSelector({ product, size="25rem" }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-
   const currentImage = product.images[currentIndex];
+  const scrollContainerRef = useRef(null);
+  const activeThumbRef = useRef(null);
 
   const handleClick = (direction) => {
     if (direction === "left") {
@@ -19,6 +20,31 @@ function ImageSelector({ product, size="25rem" }) {
         prev === product.images.length - 1 ? 0 : prev + 1
       );
     }
+  };
+
+  // Keep the selector image in view
+  useEffect(() => {
+    if (activeThumbRef.current) {
+      activeThumbRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center",
+      });
+    }
+  }, [currentIndex]);
+
+  // Gradient the edges of images which overflow the container
+  const determineSelectorGradient = () => {
+    const isFirst = currentIndex === 0;
+    const isLast = currentIndex === product.images.length - 1;
+    const leftEdge = isFirst ? "black" : "transparent";
+    const rightEdge = isLast ? "black" : "transparent";
+    return `linear-gradient(to right, ${leftEdge}, black 5%, black 95%, ${rightEdge})`;
+  };
+  const selectorGradient = determineSelectorGradient();
+  const maskImages = {
+    WebkitMaskImage: selectorGradient,
+    maskImage: selectorGradient
   };
 
   return (
@@ -34,11 +60,25 @@ function ImageSelector({ product, size="25rem" }) {
         />
         <Icon onClick={() => handleClick("right")} className={styles.chevron} path={mdiChevronRight} size={3} />
       </div>
-      <div className={styles.imageSelector}>
+      <div
+        ref={scrollContainerRef}
+        className={styles.imageSelector}
+        style={{
+          width: size,
+          display: "flex",
+          overflowX: "auto",
+          scrollBehavior: "smooth",
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+          ...maskImages,
+        }}
+      >
         {product.images.map((image, index) => {
+          console.log(image);
           return (
             <button
               type="button"
+              ref={index === currentIndex ? activeThumbRef : null}
               onClick={() => setCurrentIndex(index)}
               key={image}
               className={styles.imageSelectorButton}

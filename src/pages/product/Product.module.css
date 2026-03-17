@@ -1,4 +1,10 @@
 .productDetails {
-    display: flex;
-    flex-direction: column;
+    font-weight: var(--product-text-boldness);
+    text-shadow: var(--product-text-shadow);
+    color: var( --product-text-color);
+    background-color: var(--secondary-accent-color);
+    width: fit-content;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: var(--large-border-radius);
 }

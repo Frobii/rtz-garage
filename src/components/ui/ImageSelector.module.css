@@ -1,7 +1,7 @@
 .imagePreview {
     display: flex;
     flex-direction: column;
-    align-self: center;
+    align-items: center;
     gap: 2rem;
 }
 
@@ -15,9 +15,18 @@
 }
 
 .imageSelector {
-    display: flex;
     gap: 1rem;
-    justify-content: center;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    overflow-x: auto;
+    scrollbar-width: none; 
+    -ms-overflow-style: none;
+}
+
+.imageSelector::-webkit-scrollbar {
+    display: none;
 }
 
 .productImage {
