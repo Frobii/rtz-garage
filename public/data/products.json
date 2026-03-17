@@ -53,7 +53,8 @@
         "images": [
             "/assets/wheels/wheels-002-1.jpg",
             "/assets/wheels/wheels-002-2.jpg",
-            "/assets/wheels/wheels-002-3.jpg"
+            "/assets/wheels/wheels-002-3.jpg",
+            "/assets/wheels/wheels-002-4.jpg"        
         ],
         "specs": {
             "diameter": 17,
