@@ -6,4 +6,6 @@
 
 .shopContent {
     padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
 }
