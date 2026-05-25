@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import styles from "./CategoryMenu.module.css";
 import { useProducts } from "../../features/product/ProductContext";
+import Icon from "@mdi/react";
+import { mdiNut } from "@mdi/js";
 
-function CategoryMenu() {
+function CategoryMenu({ onSelect }) {
   const { categories, loading, error } = useProducts();
 
   if (loading) return <div>Loading categories...</div>;
@@ -17,13 +20,20 @@ function CategoryMenu() {
           <Link
             key={category}
             to={`/shop/${category}`}
+            onClick={onSelect}
           >
-            {capitalized}
+            <Icon path={mdiNut} size={1} />
+            {" " + capitalized + " "}
+            <Icon path={mdiNut} size={1} />
           </Link>
         );
       })}
     </nav>
   );
 }
+
+CategoryMenu.propTypes = {
+  onSelect: PropTypes.func,
+};
 
 export default CategoryMenu;
