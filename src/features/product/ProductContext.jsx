@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext,  useMemo, useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 const ProductContext = createContext(null);
@@ -26,8 +26,13 @@ export function ProductProvider({ children }) {
     fetchData();
   }, []);
 
+  const categories = useMemo(
+    () => [...new Set(products.map((p) => p.category))],
+    [products]
+  );
+
   return (
-    <ProductContext.Provider value={{ products, loading, error }}>
+    <ProductContext.Provider value={{ products, categories, loading, error }}>
       {children}
     </ProductContext.Provider>
   );
