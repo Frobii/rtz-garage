@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import ProductList from "../../features/product/ProductList";
 import styles from "./Shop.module.css";
+import CategoryMenu from "../../components/ui/CategoryMenu";
 
 function Shop() {
   const { category } = useParams();
@@ -27,6 +28,7 @@ function Shop() {
   return (
     <div className={styles.shopContainer}>
       <h1 className={styles.shopTitle}>{title}</h1>
+      <CategoryMenu />
       <ProductList category={categoryProp} />
     </div>
   );
