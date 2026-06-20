@@ -43,12 +43,12 @@ function Product() {
         <h1>{product.brand} {product.model}</h1>
       </div>
       <div className={styles.productInfo}>
-        <p className={styles.description}>
-          {product.description}
-        </p>
         {(product.specs && product.category === "wheels") &&
           <p className={styles.specs}>{formatWheelSpecs(product.specs)}</p>
         }
+        <p className={styles.description}>
+          {product.description}
+        </p>
         {product.accessories &&
           <p className={styles.accessories}>{formatAccessories(product.accessories)}</p>
         }
