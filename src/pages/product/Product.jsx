@@ -2,6 +2,29 @@ import { useParams } from "react-router-dom";
 import { useProducts } from "../../features/product/ProductContext";
 import ImageSelector from "../../components/ui/ImageSelector";
 import styles from "./Product.module.css";
+import CartButton from "../../features/cart/CartButton";
+
+function formatAccessories(accessories) {
+  let returnString = "Includes ";
+  accessories.forEach((e, i) => {
+    returnString = returnString + e;
+    if (!((accessories.length - 1) === i)) {
+      returnString = returnString + " + ";
+    }
+  });
+  return returnString;
+}
+
+function formatWheelSpecs(specs) {
+  const formatIndex = (index) =>
+    `${specs.diameter[index]} x ${specs.width[index]}, ET${specs.offset[index]}, ${specs.centreBore}`;
+
+  if (specs.diameter.length > 1) {
+    return `Front: ${formatIndex(0)}\nRear: ${formatIndex(specs.offset.length - 1)}`;
+  }
+
+  return formatIndex(0);
+}
 
 function Product() {
   const { productId } = useParams();
@@ -16,10 +39,28 @@ function Product() {
 
   return (
     <div className={styles.productDetails}>
-      <h1>{product.brand} {product.model}</h1>
-      <p>Category: {product.category}</p>
-      <p>Price: ${product.price}</p>
-      <ImageSelector product={product}/>
+      <div className={styles.productHeader}>
+        <h1>{product.brand} {product.model}</h1>
+      </div>
+      <div className={styles.productInfo}>
+        <p className={styles.description}>
+          {product.description}
+        </p>
+        {(product.specs && product.category === "wheels") &&
+          <p className={styles.specs}>{formatWheelSpecs(product.specs)}</p>
+        }
+        {product.accessories &&
+          <p className={styles.accessories}>{formatAccessories(product.accessories)}</p>
+        }
+      </div>
+      <ImageSelector product={product} size={"28rem"}/>
+      <div
+        className={styles.purchaseContainer}
+        style={{ width: "28rem"}}
+      >
+        <p>${product.price}</p>
+        <CartButton product={product} size={"28rem"}/>
+      </div>
     </div>
   );
 }
