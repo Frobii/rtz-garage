@@ -42,18 +42,18 @@ function Product() {
       <div className={styles.productHeader}>
         <h1>{product.brand} {product.model}</h1>
       </div>
+      {(product.specs && product.category === "wheels") &&
+        <p className={styles.specs}>{formatWheelSpecs(product.specs)}</p>
+      }
+      <ImageSelector product={product} size={"28rem"}/>
       <div className={styles.productInfo}>
-        {(product.specs && product.category === "wheels") &&
-          <p className={styles.specs}>{formatWheelSpecs(product.specs)}</p>
-        }
         <p className={styles.description}>
           {product.description}
         </p>
         {product.accessories &&
-          <p className={styles.accessories}>{formatAccessories(product.accessories)}</p>
+            <p className={styles.accessories}>{formatAccessories(product.accessories)}</p>
         }
       </div>
-      <ImageSelector product={product} size={"28rem"}/>
       <div
         className={styles.purchaseContainer}
         style={{ width: "28rem"}}
