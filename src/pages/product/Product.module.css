@@ -21,10 +21,11 @@
 
 .specs {
     margin-top: 1rem;
+    font-size: 1.4rem;
 }
 
 .productInfo {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     display: flex;
     flex-direction: column;
     width: 28rem;

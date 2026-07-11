@@ -20,7 +20,7 @@ function formatWheelSpecs(specs) {
     `${specs.diameter[index]} x ${specs.width[index]}, ET${specs.offset[index]}, ${specs.centreBore}`;
 
   if (specs.diameter.length > 1) {
-    return `Front: ${formatIndex(0)}\nRear: ${formatIndex(specs.offset.length - 1)}`;
+    return `${formatIndex(0)} Front\n${formatIndex(specs.offset.length - 1)} Rear`;
   }
 
   return formatIndex(0);
@@ -41,10 +41,10 @@ function Product() {
     <div className={styles.productDetails}>
       <div className={styles.productHeader}>
         <h1>{product.brand} {product.model}</h1>
-      </div>
-      {(product.specs && product.category === "wheels") &&
+        {(product.specs && product.category === "wheels") &&
         <p className={styles.specs}>{formatWheelSpecs(product.specs)}</p>
-      }
+        }
+      </div>
       <ImageSelector product={product} size={"28rem"}/>
       <div className={styles.productInfo}>
         <p className={styles.description}>
