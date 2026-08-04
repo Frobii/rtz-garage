@@ -14,7 +14,7 @@ function Cart() {
   return (
     <>
       <button onClick={() => setIsOpen(!isOpen)} className={styles.cartButton}>
-        <Icon path={mdiCartOutline} size={1} />
+        <Icon path={mdiCartOutline} size={1.5} />
       </button>
       {isOpen &&
         (<div className={styles.cartDropdown}>

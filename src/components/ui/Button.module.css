@@ -4,8 +4,10 @@
   justify-content: center;
   gap: 0.5rem;
   height: 3rem;
-  
-  color: #ffffff; /* should always have a suitable backgrond color */
+  padding-left: 0;
+  padding-right: 0;
+
+  color: #ffffff;
   background-color: var(--primary-accent-color);
   border: none;
   border-radius: var(--medium-border-radius);

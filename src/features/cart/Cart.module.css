@@ -1,3 +1,13 @@
+:root {
+  --cart-offset: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --cart-offset: 1rem;
+  }
+}
+
 .cartButton {
   position: fixed;
   padding: 0px;
@@ -7,7 +17,7 @@
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  right: var(--page-padding-sides);
+  right: calc(var(--page-padding-sides) - var(--cart-offset));
   background: none;
   border: none;
   cursor: pointer;
@@ -16,8 +26,8 @@
 
 .cartDropdown {
   position: fixed;
-  top: calc(80px + var(--page-padding-top)); /* cartButton height + top */
-  right: var(--page-padding-sides);
+  top: calc(80px + var(--page-padding-top));
+  right: calc(var(--page-padding-sides) - var(--cart-offset));
   background-color: var(--background-color);
   border: 1px solid var(--primary-accent-color);
   border-radius: var(--medium-border-radius);
@@ -25,7 +35,7 @@
   min-width: 300px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  display:flex;
+  display: flex;
   flex-direction: column;
   gap: 1rem;
 }

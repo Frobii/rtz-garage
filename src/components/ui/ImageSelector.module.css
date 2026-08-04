@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    width: 100%;
+    gap: 1rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
@@ -12,18 +13,18 @@
     align-items: center;
     align-self: center;
     justify-content: center;
-    width: fit-content;
+    width: 100%;
     color: var(--product-text-color);
 }
 
 .imageSelector {
     gap: 1rem;
-    width: 100%;
     display: flex;
     justify-content: flex-start;
-    overflow: hidden;
+    width: 100%;
     overflow-x: auto;
-    scrollbar-width: none; 
+    scroll-behavior: smooth;
+    scrollbar-width: none;
     -ms-overflow-style: none;
 }
 
@@ -43,6 +44,12 @@
     cursor: pointer;
 }
 
+.mainImage {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
 .chevron {
     transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1), 
                 box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -55,4 +62,9 @@
 
 .chevron:active {
     transform: scale(0.8); 
+}
+
+.thumbnail {
+    width: clamp(4.5rem, 18vw, 8rem);
+    height: clamp(4.5rem, 18vw, 8rem);
 }

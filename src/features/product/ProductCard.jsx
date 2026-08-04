@@ -22,7 +22,7 @@ function ProductCard({ product, size="8rem" }) {
         </Link>
       </div>
       <ImageCarousel product={product} size={size}/>
-      <CartButton product={product} size={size}/>
+      <CartButton product={product} width={size}/>
     </div>
   );
 }

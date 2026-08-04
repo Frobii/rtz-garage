@@ -45,7 +45,7 @@ function Product() {
       {(product.specs && product.category === "wheels") &&
         <p className={styles.specs}>{formatWheelSpecs(product.specs)}</p>
       }
-      <ImageSelector product={product} size={"28rem"}/>
+      <ImageSelector product={product}/>
       <div className={styles.productInfo}>
         <p className={styles.description}>
           {product.description}
@@ -56,10 +56,10 @@ function Product() {
       </div>
       <div
         className={styles.purchaseContainer}
-        style={{ width: "28rem"}}
+        style={{ width: "100%"}}
       >
         <p>${product.price}</p>
-        <CartButton product={product} size={"28rem"}/>
+        <CartButton product={product} width={"100%"}/>
       </div>
     </div>
   );

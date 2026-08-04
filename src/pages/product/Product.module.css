@@ -3,9 +3,8 @@
     text-shadow: var(--product-text-shadow);
     color: var( --product-text-color);
     background-color: var(--secondary-accent-color);
-    width: fit-content;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    width: min(28rem, 80vw);
+    padding: clamp(2rem, 1.5rem + 2vw, 3rem);
     border-radius: var(--large-border-radius);
     display: flex;
     flex-direction: column;
@@ -27,7 +26,6 @@
     font-size: 1.1rem;
     display: flex;
     flex-direction: column;
-    width: 28rem;
     margin-bottom: 2rem;
     gap: 1rem;
 }
@@ -38,8 +36,8 @@
 
 .purchaseContainer {
     display: flex;
-    gap: 2rem;
-    justify-content: space-evenly;
+    gap: 1rem;
+    justify-content: space-between;
     align-items: center;
 }
 

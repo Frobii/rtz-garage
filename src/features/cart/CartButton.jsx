@@ -3,7 +3,7 @@ import Button from "../../components/ui/Button";
 import { mdiCartPlus } from "@mdi/js";
 import { useCart } from "../cart/CartContext.jsx";
 
-function CartButton({ size, product }) {
+function CartButton({ width, product }) {
   const { addItem } = useCart();
 
   const handleAddToCart = () => {
@@ -14,7 +14,7 @@ function CartButton({ size, product }) {
     <Button
       iconPath={mdiCartPlus}
       title="Add to Cart"
-      width={size}
+      width={width}
       onClick={handleAddToCart}
     />
   );
@@ -22,7 +22,7 @@ function CartButton({ size, product }) {
 
 CartButton.propTypes = {
   product: PropTypes.object.isRequired,
-  size: PropTypes.string
+  width: PropTypes.string
 };
 
 export default CartButton;
