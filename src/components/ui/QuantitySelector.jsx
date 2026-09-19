@@ -23,9 +23,20 @@ function QuantitySelector({ item }) {
   return (
     <div className={styles.quantitySelector}>
       <Icon onClick={() => handleClick("-")} className={styles.quantityMinus} path={mdiMinus} size={1} />
-      <div className={styles.quantityEntry}>
-        {quantity}
-      </div>
+      <input
+        className={styles.quantityEntry}
+        value={quantity}
+        type="text"
+        inputMode="numeric"
+        pattern="[0-9]*"
+        onClick={(e) => e.target.select()}
+        onFocus={(e) => e.target.select()}
+        onChange={(e) => {
+          const digits = e.target.value.replace(/\D/g, "");
+          updateQuantity(product.id, digits === "" ? 0 : Number(digits), "input");
+        }}
+      >
+      </input>
       <Icon onClick={() => handleClick("+")} className={styles.quantityPlus} path={mdiPlus} size={1} />
     </div>
   );
