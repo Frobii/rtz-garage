@@ -34,7 +34,7 @@ function CheckoutList() {
   );
 
   return(
-    <>
+    <div className={styles.checkout}>
       <div className={styles.checkoutList}>
         {cartItems.map((item =>
           <div key={item.product.id}>
@@ -46,7 +46,7 @@ function CheckoutList() {
         <p>Total:</p>
         <p>${total.toFixed(2)}</p>
       </div>
-    </>
+    </div>
   );
 }
 

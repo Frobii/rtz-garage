@@ -2,6 +2,13 @@
     padding-bottom: 2rem;
 }
 
+.checkout {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin-inline: auto;
+}
+
 .checkoutItem {
     display: flex;
     gap: 10px;
