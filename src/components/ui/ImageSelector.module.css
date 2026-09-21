@@ -8,13 +8,17 @@
     margin-bottom: 1.5rem;
 }
 
-.carousel {
+.displayedImage {
     display: flex;
     align-items: center;
     align-self: center;
     justify-content: center;
     width: 100%;
     color: var(--product-text-color);
+    /* remove default button styling */
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 .imageSelector {

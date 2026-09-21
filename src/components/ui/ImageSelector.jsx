@@ -1,10 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import styles from "./ImageSelector.module.css";
+import { mdiSetNone } from "@mdi/js";
 
 function ImageSelector({ product }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentImage = product.images[currentIndex];
+
+  const [isFullScreen, setIsFullScreen] = useState(false);
+
   const scrollContainerRef = useRef(null);
   const activeThumbRef = useRef(null);
 
@@ -33,16 +37,39 @@ function ImageSelector({ product }) {
     maskImage: selectorGradient
   };
 
+  const toggleFullScreen = () => {
+    setIsFullScreen((prev) => !prev);
+  };
+
+  const fullScreenStyle = {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100vw",
+    height: "100vh",
+    objectFit: "contain",
+    backgroundColor: "rgba(0, 0, 0, 0.9)",
+    zIndex: 9999,
+    padding: "20px",
+    boxSizing: "border-box",
+    border: "none",
+    borderRadius: 0
+  };
+
   return (
     <div className={styles.imagePreview}>
-      <div className={styles.carousel}>
+      <button
+        className={styles.displayedImage}
+        onClick={() => toggleFullScreen()}
+      >
         <img
+          style={isFullScreen ? fullScreenStyle : null}
           className={`${styles.productImage} ${styles.mainImage} nonSelectable`}
           key={currentImage} // Key is auto generated unique image name
           src={currentImage}
           alt={`${product.brand} ${product.model}`}
         />
-      </div>
+      </button>
       <div
         ref={scrollContainerRef}
         className={styles.imageSelector}
