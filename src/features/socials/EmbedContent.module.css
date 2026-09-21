@@ -1,0 +1,27 @@
+.embedContainer {
+    width: fit-content;
+    padding: 1rem;
+    background-color: var(--secondary-accent-color);
+    border-radius: var(--medium-border-radius);
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.embedContainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.embedTitle {
+    cursor: pointer;
+    font-weight: var(--product-text-boldness);
+    text-shadow: var(--product-text-shadow);
+}
+
+iframe {
+    border-radius: var(--medium-border-radius);
+}
