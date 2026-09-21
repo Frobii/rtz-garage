@@ -21,7 +21,12 @@ function ProductCard({ product, size="8rem" }) {
           </p>
         </Link>
       </div>
-      <ImageCarousel product={product} size={size}/>
+      <Link
+        key={product.id}
+        to={`/shop/product/${product.id}`}
+      >
+        <ImageCarousel product={product} size={size}/>
+      </Link>
       <CartButton product={product} width={size}/>
     </div>
   );
