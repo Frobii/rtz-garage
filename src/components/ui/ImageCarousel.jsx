@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styles from "./ImageCarousel.module.css";
 import Icon from "@mdi/react";
 import { mdiChevronLeft , mdiChevronRight } from "@mdi/js";
+import { Link } from "react-router-dom";
 
 function ImageCarousel({ product, size="8rem" }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,13 +23,18 @@ function ImageCarousel({ product, size="8rem" }) {
   return (
     <div className={styles.carousel}>
       <Icon onClick={() => handleClick("left")} className={styles.chevron} path={mdiChevronLeft} size={2} />
-      <img
-        style={{ width: size, height: size }}
-        className={`${styles.productImage} nonSelectable`}
-        key={product.images[currentIndex]} // Key is auto generated unique image name
-        src={product.images[currentIndex]}
-        alt={`${product.brand} ${product.model}`}
-      />
+      <Link
+        key={product.id}
+        to={`/shop/product/${product.id}`}
+      >
+        <img
+          style={{ width: size, height: size }}
+          className={`${styles.productImage} nonSelectable`}
+          key={product.images[currentIndex]} // Key is auto generated unique image name
+          src={product.images[currentIndex]}
+          alt={`${product.brand} ${product.model}`}
+        />
+      </Link>
       <Icon onClick={() => handleClick("right")} className={styles.chevron} path={mdiChevronRight} size={2} />
     </div>
   );
