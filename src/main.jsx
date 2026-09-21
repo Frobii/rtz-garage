@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import { ProductProvider } from "./features/product/ProductContext.jsx";
 import { CartProvider } from "./features/cart/CartContext.jsx";
+import { ContentProvider } from "./features/socials/ContentContext.jsx";
 import "./index.css";
 import router from "./routes/router.jsx";
 
@@ -10,7 +11,9 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ProductProvider>
       <CartProvider>
-        <RouterProvider router={router} />
+        <ContentProvider>
+          <RouterProvider router={router} />
+        </ContentProvider>
       </CartProvider>
     </ProductProvider>
   </StrictMode>,
