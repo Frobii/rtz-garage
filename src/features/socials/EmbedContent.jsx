@@ -7,8 +7,7 @@ export default function EmbedContent({ source, title, link }) {
         <a className={styles.embedTitle} href={link}>{title}</a>
       </h2>
       <iframe
-        width="560"
-        height="315"
+        style={{ width: "min(80vw, 560px)", aspectRatio: "16 / 9", height: "auto" }}
         src={source}
         title={title}
         frameBorder="0"
