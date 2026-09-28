@@ -53,6 +53,10 @@
     margin: 0px;
 }
 
+.productName {
+    font-weight: var(--product-text-boldness);
+}
+
 .priceAndQuantity {
     display: flex;
     gap: 20px;
