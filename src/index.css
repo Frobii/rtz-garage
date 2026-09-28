@@ -15,10 +15,10 @@
 
   --primary-accent-color: #BC002D;
   --secondary-accent-color: #242424;
-  /* --terriary-accent-color:  */
+  --tertiary-accent-color:  #ededed;
 
   --product-text-boldness: 600;
-  --product-text-shadow: 2px 3px var(--primary-accent-color);
+  --product-text-shadow: 1.5px 1.5px var(--primary-accent-color);
   --product-border: 3px solid var(--primary-accent-color);
   --product-box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
@@ -30,7 +30,8 @@
     
     --primary-accent-color: #747bff;
     --secondary-accent-color: #535bf228;
-    --terriary-accent-color: #646bff;
+    /* same as secondary to allow for dif */
+    --tertiary-accent-color: #535bf228; 
 
     --product-text-shadow-color: var(var(--primary-accent-color)); 
     --product-text-shadow: 2px 3px #535bf25d;
