@@ -17,9 +17,12 @@
 }
 
 .embedTitle {
+    display: inline-block;
+    color: var(--product-text-color) !important;
     cursor: pointer;
     font-weight: var(--product-text-boldness);
     text-shadow: var(--product-text-shadow);
+    -webkit-tap-highlight-color: transparent;
 }
 
 iframe {
