@@ -13,7 +13,8 @@
         "description": "Lightweight forged wheels perfect for street and track.",
         "images": [
             "/assets/wheels/wheels-001-1.jpg",
-            "/assets/wheels/wheels-001-2.jpg"
+            "/assets/wheels/wheels-001-2.jpg",
+            "/assets/wheels/wheels-001-3.jpg"
         ],
         "specs": {
             "diameter": [17, 18],
