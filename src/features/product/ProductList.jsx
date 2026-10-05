@@ -113,7 +113,7 @@ const ProductList = ({ category, horizontal = false, sort = "none"} ) => {
 ProductList.propTypes = {
   category: PropTypes.string.isRequired,
   horizontal: PropTypes.bool.isRequired,
-  sortOrder: PropTypes.string.isRequired
+  sort: PropTypes.string.isRequired
 };
 
 export default ProductList;
