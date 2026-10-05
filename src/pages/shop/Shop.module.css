@@ -21,3 +21,14 @@
     display: flex;
     flex-direction: column;
 }
+
+/* Fix misalignment due to H2 line height */
+.shopTitle {
+  transform: translateY(-0.06em);
+}
+@supports (text-box: trim-both cap alphabetic) {
+  .shopTitle {
+    text-box: trim-both cap alphabetic;
+    transform: none;
+  }
+}
