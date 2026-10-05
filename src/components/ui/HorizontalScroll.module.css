@@ -1,0 +1,28 @@
+.horizontalScroll {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  justify-content: flex-start;
+  overflow-x: auto;
+  margin-top: 0;
+  padding: 1rem;
+  scrollbar-width: thin;
+  --fade: 1rem;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 var(--fade),
+    #000 calc(100% - var(--fade)),
+    transparent
+  );
+  user-select: none;
+}
+
+.horizontalScroll > * {
+  flex: 0 0 auto;
+}
+
+.horizontalScroll img,
+.horizontalScroll a {
+  -webkit-user-drag: none;
+}
